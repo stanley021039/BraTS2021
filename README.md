@@ -8,9 +8,10 @@
 
 ## 結果比較
 #### 如下表所示，我們可以發現3D-Unet表現較2D-Unet好，推測是因為加入Z方向資訊的結果。而將U-net的各個卷積層替換為Residual block後，成積也有些為提升
-![image](https://github.com/stanley021039/BraTS2021/blob/master/1.PNG)
+![image](https://github.com/stanley021039/BraTS2021/blob/master/2.jpg)
 ## 可視化
 #### 下圖為幾個資料的可視化圖片，可以發現我們的模型能夠有效判斷腫瘤位置，且小型病灶也能判斷出來，但輪廓沒有非常完美，造成整體分數無法更提升。
-![image](https://github.com/stanley021039/BraTS2021/blob/master/2.jpg)
+![image](https://github.com/stanley021039/BraTS2021/blob/master/1.PNG)
+
 ## 結果與討論
 ####  在目前的研究中，我們使用的3D-Unet在MRI腦瘤分割中取得了0.61的dice score。在4.2的比較中，我們可以發現3D-Unet因考慮了Z方向的資訊，整體表現較好，而替換Residual block，分數也有些為提升。在4.3的可視化中，我們發現模型能精準分辨病灶區域，但病灶輪廓並不完美。未來期望能嘗試將輸入尺寸加大，或是使用multiscale的方法解決邊界分割的問題。
